@@ -16,11 +16,12 @@ class testdb(models.Model):
 
 class exam(models.Model):
     APIKEY = "**********"
-    image_path = "http://example.com/image/d03f1d36ca69348c51aa/c413eac329e1c0d03/test.jpg"
+    url = "http://example.com/"
+    image_path = "/image/d03f1d36ca69348c51aa/c413eac329e1c0d03/test.jpg"
     
     headers = { 'token': APIKEY }
     params = { 'body': image_path }
-    res = requests.post(headers=headers, params=params).json()
+    res = requests.post(url, headers=headers, params=params).json()
 
     success = res['success']
     message = res['message']
