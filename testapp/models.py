@@ -21,7 +21,7 @@ class exam(models.Model):
     
     headers = { 'token': APIKEY }
     data = { 'image_path': image_path }
-    res = requests.post(url, headers=headers, data=data).json()
+    res = requests.post(url, headers=headers, data=json.dumps(data)).json()
 
     success = res['success']
     message = res['message']
