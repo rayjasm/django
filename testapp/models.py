@@ -20,7 +20,7 @@ class exam(models.Model):
     image_path = "/image/d03f1d36ca69348c51aa/c413eac329e1c0d03/test.jpg"
     
     headers = { 'token': APIKEY }
-    data = { 'body': image_path }
+    data = { 'image_path': image_path }
     res = requests.post(url, headers=headers, data=data).json()
 
     success = res['success']
