@@ -1,5 +1,5 @@
 # django
 django 4.2.5
 
-test-api for testing<br>
+testing api mock-up for 'testapp'<br>
 https://github.com/rayjasm/test-api
